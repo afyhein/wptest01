@@ -1,0 +1,1011 @@
+/*
+Theme Name: Travel Agency Myanmar Co., Ltd
+Author: Travel Agency Myanmar Co., Ltd
+Author URI: https://www.travelagencymyanmar.com.mm
+Version: 1.0.0
+*/
+
+/* Common Style */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500,900&family=Quicksand:wght@300;400,700&family=Raleway:wght@500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #202426;
+    color: #fff;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a,
+button,
+input[type="submit"] {
+    cursor: pointer;
+}
+
+p{
+    letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+p,
+a,
+label,
+input,
+textarea{
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.container,
+.inner-container {
+    margin: auto;
+}
+
+.container {
+    width: 80%;
+    max-width: 1800px;
+}
+
+.inner-container {
+    width: 60%;
+    max-width: 1100px;
+}
+
+.txt-primary {
+    color: #d91e3d;
+}
+
+.info-contrast{
+    background-color: #d91e3d;
+    color: #fff;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+input,
+textarea {
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    padding: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+.wpforms-field-large:required,
+.wpforms-field-large:invalid {
+    box-shadow: none;
+}
+
+textarea {
+    overflow: auto;
+	resize: vertical;
+	max-height: 100px;
+}
+
+.active-link {
+    color: #d91e3d !important;
+ }
+
+@media screen and (max-width: 900px) {
+    h1{
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .info-contrast{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    h1{
+        font-size: 35px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+}
+
+/* Header Style */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 99;
+    background-color: #00425A;
+    transition: all .2s ease;
+}
+
+header .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 0;
+    position: relative;
+}
+
+header a.logo{
+    display: flex;
+    align-items: center;
+}
+
+
+header .container .logo img{
+	width: 40px;
+	height: 40px;
+}
+
+header a.logo span{
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+
+header nav.desktop-menu a {
+    display: inline-block;
+    margin-left: 80px;
+    text-transform: uppercase;
+    font-size: 12px;
+    /* font-weight: bold; */
+    letter-spacing: 2px;
+    transition: all .5s ease;
+}
+
+header nav a:hover,
+header nav a:active{
+    color: #d91e3d;
+    margin-left: 60px;
+}
+
+
+header #mobile-menu-trigger {
+    display: none;
+}
+
+/* header #mobile-menu-trigger .fa-times{
+    display: none;
+}
+
+header #mobile-menu-trigger.on .fa-bars{
+    display: none;
+}
+
+header #mobile-menu-trigger.on .fa-times{
+    display: block;
+} */
+
+header.right-responsive-menu {
+    display: none;
+    position: absolute;
+}
+
+/* Banner Section Style */
+
+section#banner-sec {
+    margin-top: 44px;
+    width: 100%;
+    height: 900px;
+    background: url('assets/img/travel-myanmar-banner.jpg') left center no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+/* section#banner-sec::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    background-color: rgba(72, 0, 0, 0.5);
+} */
+
+section#banner-sec .container {
+    position: relative;
+    z-index: 999;
+    width: 80%;
+    height: 100%;
+}
+
+section#banner-sec .top-banner-image{
+    display: none;
+}
+
+section#banner-sec .container .slogan {
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section#banner-sec .container .slogan > p {
+    font-size: 23px;
+    letter-spacing: 1.5px;
+}
+
+section#banner-sec .container .slogan h1 {
+    text-transform: uppercase;
+}
+
+section#banner-sec .container .slogan h1:last-child {
+    /* margin-left: 384px; */
+}
+
+section#banner-sec .container .contact-info {
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+}
+
+section#banner-sec .container .contact-info p {
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 50px;
+}
+
+section#banner-sec .container .contact-info p:last-child {
+    margin-bottom: 0;
+    margin-left: -20px;
+}
+
+/* About Section Style */
+
+section#about-sec {
+    padding: 160px 0 160px;
+}
+
+section#about-sec .head-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+section#about-sec .head-area>div {
+    width: 40%;
+}
+
+section#about-sec .head-area h2 {
+    letter-spacing: 1px;
+}
+
+section#about-sec .head-area>div:last-child a {
+    float: right;
+}
+
+section#about-sec .head-area .title p {
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+section#about-sec .head-area .button-area a.more-btn {
+    display: block;
+    position: relative;
+}
+
+section#about-sec .head-area .button-area a.more-btn::before {
+    content: "";
+    position: absolute;
+    border-top: 30px solid rgba(217, 30, 61, .5);
+    border-left: 20px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 20px solid transparent;
+    left: -20px;
+    top: 0;
+    transition: all .5s ease;
+}
+
+section#about-sec .head-area .button-area a.more-btn:hover::before {
+    top: 20px;
+}
+
+section#about-sec .card-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between !important;
+    margin-bottom: 40px;
+    padding: 60px 0;
+}
+
+section#about-sec .card-area .card {
+    width: calc(100% / 3 - 50px);
+    height: auto;
+    transition: all 0.3s ease-in;
+}
+
+section#about-sec .card-area .card::before {
+    /* content: '';
+    width: 100%;
+    height: 0;
+    background: rgba(255, 255, 255, 0.24);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.3s ease-in-out; */
+    /* z-index: -1; */
+}
+
+section#about-sec .card-area .card:hover::before {
+    height: 100%;
+}
+
+section#about-sec .card-area .card:hover {
+    cursor: pointer;
+    box-shadow: none;
+}
+
+section#about-sec .card-area .card::before {
+    content: "";
+    position: absolute;
+}
+
+section#about-sec .card-area .card .image{
+    height: 100px;
+}
+
+section#about-sec .card-area .card:first-child .image {
+    background: url(assets/img/service-1.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+section#about-sec .card-area .card:nth-child(2) .image {
+    background: url(assets/img/service-2.jpg) no-repeat center center;
+    background-size: cover;
+    margin-top: 20px;
+}
+
+section#about-sec .card-area .card:last-child .image {
+    background: url(assets/img/service-3.jpg) no-repeat center center;
+    background-size: cover;
+    margin-top: 40px;
+}
+
+section#about-sec .card-area .card span {
+	display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 30px;
+    word-spacing: 5px;
+/*     padding: 20px 0; */
+}
+
+section#about-sec .card-area .card p{
+    font-size: 17px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    word-break: break-word;
+    color: #f1f1f1;
+}
+
+section#about-sec .card-area .card p.explanation{
+    position: relative;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+section#about-sec .card-area .card p.explanation:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: #fff;
+    margin-right: 20px;
+}
+
+section#about-sec .container>p {
+    width: 50%;
+    line-height: 1.7;
+    letter-spacing: 1px;
+}
+
+/* Service Section Style */
+
+section#service-sec .service {
+    width: 100%;
+    min-height: 480px;
+    height: auto;
+    position: relative;
+}
+
+section#service-sec .service::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(72, 0, 0, 0.4);
+    transition: all .5s ease-in;
+    opacity: 0;
+}
+
+section#service-sec .service:hover::before {
+    opacity: 1;
+}
+
+section#service-sec .service:active::before {
+    opacity: 1;
+}
+
+section#service-sec .service:first-child {
+    /* background: url(assets/img/web.jpg) no-repeat center center; */
+    background-size: cover;
+}
+
+section#service-sec .service:nth-child(2) {
+    /* background: url(assets/img/graphic.jpg) no-repeat center center; */
+    background-size: cover;
+}
+
+section#service-sec .service:last-child {
+    /* background: url(assets/img/data-annotation.jpg) no-repeat top center; */
+    background-size: cover;
+}
+
+section#service-sec .service .inner-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 100px 0;
+}
+
+section#service-sec .service .inner-container .category {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 2px;
+    width: 40%;
+    position: relative;
+}
+
+section#service-sec .service .inner-container .category::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    bottom: 2px;
+    left: 0;
+}
+
+section#service-sec .service .inner-container .intro {
+    padding: 40px 0;
+    font-size: 17px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+section#service-sec .service-2 .inner-container .intro {
+    display: block;
+}
+
+section#service-sec .service-3 .inner-container .intro {
+    display: block;
+}
+
+/* Contact Section Style */
+
+section#contact-sec {
+    padding: 160px 0 160px;
+    width: 100%;
+    /* background: url('assets/img/contact.png') no-repeat center center; */
+    background-size: cover;
+}
+
+section#contact-sec .inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section#contact-sec .inner-container>div {
+    width: 50%;
+    height: 500px;
+}
+
+section#contact-sec .inner-container .form {
+    background-color: #202426;
+    display: flex;
+    flex-direction: column;
+}
+
+ section#contact-sec .inner-container .form form {
+    padding: 40px;
+    padding-bottom: 20px;
+    height: 100%;
+}
+
+/* section#contact-sec .form form>div {
+    height: calc(100% / 4);
+} */
+
+
+section#contact-sec .form .wpforms-container form .wpforms-field-container> div{
+    height: 110px;
+}
+
+section#contact-sec .wpforms-field {
+    position: relative;
+    padding: 20px 0 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+section#contact-sec .wpforms-field-large {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 17px;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+section#contact-sec .wpforms-field-large::placeholder {
+    color: transparent;
+}
+
+section#contact-sec .wpforms-field-large:placeholder-shown~.wpforms-field-label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+}
+
+section#contact-sec .wpforms-required-label{
+	display: none;
+}
+
+section#contact-sec .wpforms-field-label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #9b9b9b;
+    pointer-events: none;
+}
+
+section#contact-sec .wpforms-field-large:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #a6172f, #d91e3d);
+    border-image-slice: 1;
+}
+
+section#contact-sec .wpforms-field-large:focus~.wpforms-field-label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #d91e3d;
+    font-weight: 700;
+}
+
+section#contact-sec label.wpforms-error{
+	position: relative;
+	top: 15px;
+	color: #d91e3d;
+}
+section#contact-sec .form .wpforms-submit-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+	height: 110px;
+}
+
+section#contact-sec .form .wpforms-submit-container .wpforms-submit {
+    position: relative;
+    color: #fff;
+    left: -40px;
+    height: auto;
+}
+
+section#contact-sec .form .wpforms-submit-container .wpforms-submit::after {
+    content: "";
+    position: absolute;
+    border-left: 30px solid rgba(217, 30, 61, .5);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 30px solid transparent;
+    top: -10px;
+    left: 18px;
+    transition: all .5s ease-in-out;
+}
+
+section#contact-sec .form .wpforms-submit-container .wpforms-submit:hover::after {
+    left: 50px;
+}
+
+section#contact-sec .form #wpforms-output{
+	text-align: center;
+	margin-top: calc(100% / 20);
+}
+
+section#contact-sec .form #wpforms-output p{
+	color: #d91e3d;
+}
+
+section#contact-sec .information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+section#contact-sec .information .head-area p {
+    padding-top: 10px;
+}
+
+section#contact-sec .information .contact-info-area p {
+    padding: 20px 0;
+}
+
+section#contact-sec .information .social-icons-area {
+    padding: 20px 0;
+}
+
+section#contact-sec .information .social-icons-area a {
+    display: inline-block;
+    padding: 10px;
+    background-color: #fff;
+}
+
+section#contact-sec .information .social-icons-area a i {
+    color: #202426;
+    font-size: 16px;
+}
+
+/* Footer Section Style */
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Scroll to Top button Style */
+
+.scroll-to-top {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    background: #d91e3d;
+    padding: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-to-top:hover i{
+    top: -7px;
+}
+
+.scroll-to-top i{
+    position: relative;
+    top: 0;
+    transition: top .2s ease;
+}
+
+
+/* @media 1400px and less than */
+@media screen and (max-width: 1400px) {
+    .inner-container {
+        width: 70%;
+    }
+}
+
+/* @media 1200px and less than */
+@media screen and (max-width: 1200px) {
+    section#banner-sec .container .slogan h1:last-child {
+        margin-left: 179px;
+    }
+}
+
+/* @media 900px and less than */
+@media screen and (max-width: 900px) {
+
+    header .desktop-menu {
+        display: none;
+    }
+
+    header #mobile-menu-trigger {
+        display: block;
+        width: 40px;
+        height: 35px;
+        position: relative;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+    }
+
+    header #mobile-menu-trigger span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #fff;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+    }
+
+    #mobile-menu-trigger span:nth-child(1) {
+        top: 0px;
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -o-transform-origin: left center;
+        transform-origin: left center;
+    }
+
+    #mobile-menu-trigger span:nth-child(2) {
+        top: 18px;
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -o-transform-origin: left center;
+        transform-origin: left center;
+    }
+
+    #mobile-menu-trigger span:nth-child(3) {
+        top: 36px;
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -o-transform-origin: left center;
+        transform-origin: left center;
+    }
+
+    #mobile-menu-trigger.open span:nth-child(1) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: 3px;
+        left: 6px;
+    }
+
+    #mobile-menu-trigger.open span:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+    }
+
+    #mobile-menu-trigger.open span:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        top: 32px;
+        left: 6px;
+    }
+
+    .right-responsive-menu {
+        box-shadow: -9px 9px 11px -11px rgba(0,0,0,0.75);
+        -webkit-box-shadow: -9px 9px 11px -11px rgba(0,0,0,0.75);
+        -moz-box-shadow: -9px 9px 11px -11px rgba(0,0,0,0.75);
+        width: 50%;
+        min-width: 300px;
+        position: fixed;
+        top: 80px;
+        right: 1000px;
+        transition: all .5s ease-in;
+        z-index: 99;
+    }
+
+    .right-responsive-menu.show {
+        right: 0;
+    }
+
+    nav.mobile-menu {
+        padding: 40px 0px;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        z-index: 9999;
+        background-color: #000;
+        padding: 60px 0px;
+    }
+
+    nav.mobile-menu a {
+        padding: 40px 60px;
+    }
+
+    .mobile-menu a {
+        padding: 20px 0px;
+        color: #fff;
+    }
+
+    .inner-container {
+        width: 80%;
+    }
+
+    section#banner-sec {
+        background: url(assets/img/mobile-banner.png) no-repeat right center;
+        height: 700px;
+    }
+
+    section#banner-sec::before {
+        content: "";
+        display: none;
+    }
+
+    section#banner-sec .container .slogan {
+        margin: auto;
+        text-align: left;
+    }
+
+    section#banner-sec .container .slogan h1:last-child{
+        margin-left: 0;
+    }
+
+    section#banner-sec .container .contact-info {
+        left: 0;
+    }
+
+    section#banner-sec .container .contact-info p:last-child {
+        margin-left: 0px;
+    }
+
+    section#about-sec .container>p {
+        width: 100%;
+    }
+
+    section#about-sec .card-area{
+        flex-direction: column;
+    }
+
+    section#about-sec .card-area .card{
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+    section#contact-sec .inner-container {
+        flex-direction: column;
+    }
+
+    section#contact-sec .inner-container>div {
+        width: 100%;
+    }
+
+    section#contact-sec .inner-container .form {
+        order: 2;
+    }
+
+    section#contact-sec .information {
+        order: 1;
+    }
+
+    section#contact-sec .information {
+        order: 1;
+    }
+
+    section#banner-sec .container .slogan {
+        width: 100%;
+    }
+}
+
+/* @media 700px and less than */
+@media screen and (max-width: 700px) {
+    section#about-sec .card-area {
+        flex-direction: column;
+    }
+
+    section#about-sec .card-area .card {
+        width: 100%;
+    }
+
+    section#about-sec .card-area .card::before {
+       display: none;
+    }
+}
+
+/* @media 500px and less than */
+@media screen and (max-width: 500px) {
+    section#banner-sec {
+        background-size: 80%;
+    }
+
+    section#banner-sec .container .contact-info p {
+        margin-bottom: 30px;
+    }
+
+    section#about-sec .head-area {
+        flex-direction: column;
+    }
+
+    section#about-sec .head-area>div {
+        width: 100%;
+    }
+
+    section#about-sec .head-area>div:last-child a {
+        margin: 40px 0;
+    }
+
+    section#about-sec .card-area .card span{
+        display: block;
+        padding: 10px;
+    }
+}
+
+/* @media 400px and less than */
+@media screen and (max-width: 400px) {
+    section#banner-sec {
+        height: 600px;
+    }
+
+    section#about-sec {
+        padding: 60px 0 60px;
+    }
+}
